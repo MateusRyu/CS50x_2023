@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: I tested measuring the time to sort sorted50000.txt 5 runs is to figure out by the omega, because this parameter is diferent for each algorithm, the list with most number will show more diference in the time to run and 5 times is to reduce the error to compare. I got a mean of 1.2974s (1.025s, 1.489s, 1.342s, 1.481s, 1.150s), the faster algorithm and this can meas that's omega(n).
+
+sort2 uses: Merge sort
+
+How do you know?: Repeating the same way to test like before, i got a mean of 1.337s (1.038s, 1.181s, 1.426s, 1.717s, 1.323s) to sort sorted50000.txt. This was close to the last algorithm but slower, then this can omega(n log n).
+
+sort3 uses: Selection sort
+
+How do you know?: Repeating the same way to test like before, i got a mean of 3.0576s (2.727s, 3.212s, 3.313s, 2.972s, 3.064s) to sort sorted50000.txt. By far the slowest, of course it's omega(n^2).
