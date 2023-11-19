@@ -1,0 +1,29 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you
+characterize their audio aura?
+
+Look like the danceability of the songs seems to be quite high on average, with
+an average value of 0.71646. This suggests that the songs are generally suitable
+for dancing. However, there's some variation, with some songs being less
+danceable (46 are 0.258 < danceability < 0.71646) and others being highly
+danceable (54 are 0.71646 < danceability < 0.964). The energy level of the songs
+also appears to be relatively high on average, with an average energy value of
+0.65906. This suggests that the songs are likely to be energetic and lively.
+Similar to danceability, there's some variability in energy levels, with 47% of
+songs having lower energy and 53% having higher energy. The valence of the songs,
+which represents their positivity, is moderate, with an average value of
+0.48444. This suggests a mix of both positive and less positive songs. It's
+evenly split, with 51 of songs having lower valence and 49 having higher
+valence.
+
+Hypothesize about why the way you’ve calculated this aura might not be very
+representative of the listener. What better ways of calculating this aura would
+you propose?
+
+There others parameter to consider that seen to be more relevant than what was
+said before. For example, the speechines look to be more representative, cause
+the avarege value is 0.11557 and 65% of the song have lower speechines
+indicating a preference for non-speech-heavy tracks (the songs are more melodic
+and instrumental). Also, seen like the person has some favourites artists
+(Drake, Ed Sheeran, Marshmello, Post Malone and XXXTENTACION) and he seek their
+song (autoral and collab count to be 22 songs) and the other songs may be similar
+to his favourits artits.
