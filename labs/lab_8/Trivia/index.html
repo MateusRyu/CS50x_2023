@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            function changeBackgroundColor(element, color) {
+                element.style.backgroundColor = color;
+            }
+
+            // Wait until DOM is loaded
+            window.addEventListener('DOMContentLoaded', function(event) {
+
+                // When correct answer is clicked, change color to green
+                let correct = document.querySelector('.correct');
+                let feedback1 = document.querySelector('#feedback1');
+                correct.addEventListener('click', function(event) {
+                    changeBackgroundColor(correct, 'green');
+                    feedback1.innerHTML  = 'Correct!';
+                });
+
+                // When incorrect answer is clicked, change color to red
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i  < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function(event) {
+                        changeBackgroundColor(incorrects[i], 'red');
+                        feedback1.innerHTML  = 'Inorrect';
+                    });
+                }
+
+                // Check free response
+                let correctAnswer = 'en passant';
+                let feedback2 = document.querySelector('#feedback2');
+                document.querySelector('#check').addEventListener('click', function(event) {
+                    let input = document.querySelector('input');
+                    if (input.value.toLowerCase() === correctAnswer) {
+                        changeBackgroundColor(input, 'green');
+                        feedback2.innerHTML  = 'Correct!';
+                    } else {
+                        changeBackgroundColor(input, 'red');
+                        feedback2.innerHTML  = 'Incorrect';
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>
+                    In chess, which piece has the unique ability to move in an
+                    L-shape, consisting of two squares in one direction and then
+                    one square at a right angle, either clockwise or
+                    counterclockwise?
+                </h3>
+
+                <button class="incorrect">Bishop</button>
+                <button class="incorrect">Rook</button>
+                <button class="correct">Knight</button>
+                <button class="incorrect">Queen</button>
+                <button class="incorrect">King</button>
+
+                <p id="feedback1"></p>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>
+                    In chess, what is the unique capturing move that allows a
+                    pawn to capture an opponent's pawn that has just moved two
+                    squares forward, as if it had only moved one square. This
+                    special capture is made diagonally and can only be executed
+                    immediately after the opponent's pawn's two-square advance?
+                </h3>
+                <input type="text" placeholder="Write your answer then click on the 'Check' button" autocomplete="off"/>
+                <button id="check">Check</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
