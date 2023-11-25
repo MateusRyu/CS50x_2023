@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="section">
+        <h2>Edit a person data</h2>
+        <h3>Previous data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.month }}/{{ person.day }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr/>
+        <h3>New data</h3>
+        <form action="/update" method="post">
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Name" value="{{person.name}}" />
+            <input type="number" max="12" min="1" name="month" placeholder="Month" value="{{person.month}}" />
+            <input type="number" max="31" min="1" name="day" placeholder="Day" value="{{person.day}}" />
+            <input type="hidden" name="id" value="{{ person.id }}" />
+            <input type="submit" value="Update Birthday" />
+        </form>
+    </div>
+{% endblock %}
