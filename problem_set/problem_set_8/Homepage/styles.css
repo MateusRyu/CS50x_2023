@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', "Lucida Console", "Courier New", monospace;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#goTop {
+    /* Hidden by default */
+    display: none;
+
+    /* Fixed/sticky position  at bottom-right*/
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+
+    /* Place it over other elements */
+    z-index: 99;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+}
+
+.nav-pills .nav-link:hover {
+    /*
+        horizontal shadow (1px) and the vertical shadow (1px) and add a blur
+        effect (5px) to the shadow
+    */
+    text-shadow: 1px 1px 2px red;
+}
+
+.nav-pills .nav-link.active {
+    /*
+        horizontal shadow (2px) and the vertical shadow (2px) and add a blur
+        effect (5px) to the shadow
+    */
+    text-shadow: 2px 2px 5px red;
+}
+
+/* pointer is an anchor that look as button */
+.pointer {
+    display: inline-block;
+    margin-left: 0px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-decoration: none;
+    width: 95%;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.features > .card {
+    max-width: 24rem;
+}
+
+/* Youtube video has 16/9 of aspect ratio */
+.youtube {
+    height: calc(50vw / (16 / 9));
+    width: 50vw;
+}
+
+.carousel-inner img {
+    display: block;
+    max-height: 12rem;
+    min-height: 12rem;
+    max-width: 75%;
+    margin: auto;
+    object-fit: contain;
+    margin-bottom: 2rem;
+  }
+
+.carousel-caption {
+    backdrop-filter: blur(6px);
+    padding: 0px;
+}
+
+#hello {
+    min-width: 300px;
+}
+
+#yingYang {
+    font-size: 3vw;
+}
+
+#chessContent {
+    width:100%
+}
+
+@media (min-width: 768px) {
+    #hello {
+        min-width: 300px;
+        max-width: 1vw;
+    }
+
+    #yingYang {
+        font-size: 1.5vw;
+    }
+
+    #chessContent {
+        width: 60%
+    }
+}
